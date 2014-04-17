@@ -1,0 +1,91 @@
+﻿<!doctype html>
+<html lang="nl" class="no-js">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>RobIII</title>
+    <meta name="description" content="RobIII">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400">
+    @Styles.Render("~/bundles/css")
+    <script src="/js/vendor/modernizr-2.7.1-respond-1.4.2.min.js"></script>
+
+    <meta property="og:title" content="RobIII">
+    <meta property="og:url" content="http://robiii.nl/">
+    <meta property="og:image" content="http://robiii/img/og_logo.png">
+    <meta property="og:description" content="RobIII" />
+    <meta property="og:locale" content="nl_NL" />
+</head>
+
+<body>
+    <div class="container">
+        <!--[if lt IE 9]>
+            <p class="alert alert-danger text-center">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.
+            </p>
+        <![endif]-->
+    </div>
+    <div class="site-head">
+        <div class="container container-fluid">
+            <div class="row">
+                <div class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
+                    <div id="user-image" title="RobIII's Picture"></div>
+                </div>
+                <div class="col-md-8">
+                    <h1 class="site-title">Rob Janssen <small>(RobIII)</small></h1>
+                    <h2 class="site-description">Software engineer at <a href="http://keensystems.eu">KeenSystems</a>, moderator &amp; mediator @@<a href="http://tweakers.net/gallery/robiii">GoT</a> and proud father of two <a href="http://lucajanssen.nl">great</a> <a href="http://danujanssen.nl">sons</a>. Pretty much all-round developer.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container container-fluid">
+        <ul id="nav" class="nav nav-tabs nav-justified">
+            <li class="active"><a href="#blogroll">I write</a></li>
+            <li><a href="#code">I code</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-pane active fade in" id="blogroll">
+
+                @RenderBody()
+
+            </div>
+            <div class="tab-pane fade" id="code">
+
+                <p>Github / Bitbucket / Codeplex / etc. projects lists</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eros quam, vestibulum sit amet aliquet at, rhoncus vel neque. Integer tincidunt tincidunt nisi, sed tincidunt metus. Nullam suscipit lorem a nulla faucibus, a feugiat libero accumsan. Aliquam erat volutpat. Sed nulla lectus, suscipit a nisl vel, bibendum viverra quam. Nam interdum risus dui, ac gravida nisi adipiscing nec. Nunc id tincidunt enim, vitae malesuada augue. Vivamus malesuada facilisis euismod. Donec id congue magna. Curabitur et suscipit purus. Morbi iaculis lacus in consectetur porttitor. Nunc egestas nunc non elit dapibus pretium. Vivamus porttitor orci sed blandit porttitor.</p>
+                <p>Quisque tempor, magna eget suscipit laoreet, odio diam commodo mauris, eu vulputate purus quam a orci. Phasellus velit nunc, facilisis facilisis tortor in, imperdiet mattis magna. Fusce consectetur quam eros, viverra placerat felis aliquet et. Vestibulum eleifend a ligula a tempor. Suspendisse fringilla libero at risus ullamcorper imperdiet. Integer sit amet urna vitae dolor auctor vestibulum vitae vel ante. Nunc luctus lorem massa, at pretium est eleifend eget.</p>
+
+            </div>
+            <div class="tab-pane fade" id="about">
+
+                <p>About.me-like page / CV / lots of icons (LinkedIn, Twitter, RSS?, ...) / tweakers posts...?</p>
+                <p>Etiam egestas erat nunc, ac lobortis metus lacinia et. Sed auctor gravida purus, a luctus diam venenatis sed. Ut commodo et lacus a laoreet. Sed scelerisque massa vitae sagittis tempor. Donec dignissim velit libero, vitae malesuada tortor tempus non. In mi nunc, fringilla eget scelerisque at, commodo sed nulla. Ut feugiat, erat a pulvinar vestibulum, risus nunc rutrum ipsum, non feugiat arcu velit sit amet velit.</p>
+                <p>Donec eu dapibus nulla. Pellentesque malesuada tortor non neque varius, id vehicula nulla venenatis. Maecenas sit amet condimentum nulla. Vestibulum viverra at tellus vel tempor. Mauris non feugiat nisi. Nullam vehicula tellus ac eros convallis laoreet. Nam ac nunc vestibulum, dignissim neque et, gravida nunc. Sed nunc lectus, feugiat id molestie quis, molestie eu odio. Sed sed accumsan massa, quis dictum odio. Cras at condimentum metus. Pellentesque elementum turpis enim, sit amet malesuada nunc interdum eget.</p>
+
+            </div>
+            <div class="tab-pane fade" id="contact">
+
+                <p>Twitter / Contact form / ...</p>
+                <p>Vivamus consequat risus quis risus sagittis bibendum. Fusce tincidunt vel arcu non consectetur. Sed felis felis, porttitor ac risus a, sodales dignissim enim. Nunc ac luctus magna, at rutrum sapien. Aliquam vel magna vitae nibh ullamcorper adipiscing sit amet vel lorem. Cras vestibulum mauris et tortor commodo feugiat a quis nunc. Suspendisse adipiscing ligula tellus, nec egestas lacus aliquam eget. Suspendisse potenti.</p>
+                <p>Phasellus et justo mollis, tincidunt quam quis, interdum est. Pellentesque lacus dui, interdum id dignissim id, lobortis eget mauris. Aliquam tristique odio vel dictum hendrerit. Ut ac massa ac mauris consectetur ultrices. Vivamus porta accumsan massa, sit amet faucibus metus facilisis et. Aenean consequat justo ornare elit ultricies, ut congue ligula dignissim. Donec non sodales leo. Curabitur consequat velit dui, eu venenatis nisi porta ac. Duis malesuada cursus sem, non ornare sapien tempor quis. Cras at sem vehicula, lobortis diam porta, rutrum mauris. Aliquam vestibulum est eget felis convallis ultricies.</p>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center">
+        &copy; 2000-@DateTime.Now.Year Rob Janssen
+    </footer>
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.1.0.min.js"><\/script>')</script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
+    @Scripts.Render("~/bundles/js")
+</body>
+</html>
