@@ -16,6 +16,8 @@ namespace MvcBootstrap
                         "~/css/bootstrap.min.css",
                         "~/css/main.css"
             ));
+
+            BundleTable.EnableOptimizations = true;
         }
     }
 }

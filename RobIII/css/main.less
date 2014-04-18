@@ -129,3 +129,39 @@ a:visited {
     text-shadow: none;
     color: #fff;
 }
+
+/* SOCIAL ICONS */
+
+@icons_normal: 50px;
+@icons_hover: 60px;
+@icons_margin: (@icons_hover - @icons_normal) / 2;
+@icons_speed: .1s;
+
+.x {
+    height: @icons_hover;
+    margin-bottom: 20px;
+}
+
+    .x a:hover {
+        text-decoration: none;
+    }
+
+    .x svg {
+        width: @icons_normal;
+        height: @icons_normal;
+        -moz-transition: width @icons_speed, height @icons_speed, margin @icons_speed;
+        -webkit-transition: width @icons_speed, height @icons_speed, margin @icons_speed;
+        -o-transition: width @icons_speed, height @icons_speed, margin @icons_speed;
+        transition: width @icons_speed, height @icons_speed, margin @icons_speed;
+        -moz-transition-timing-function: ease-in-out;
+        -o-transition-timing-function: ease-in-out;
+        -webkit-transition-timing-function: ease-in-out;
+        transition-timing-function: ease-in-out;
+        margin: @icons_margin;
+    }
+
+        .x svg:hover {
+            width: @icons_hover;
+            height: @icons_hover;
+            margin: 0;
+        }

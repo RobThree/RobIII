@@ -107,4 +107,30 @@ a:focus {
   text-shadow: none;
   color: #fff;
 }
+/* SOCIAL ICONS */
+.x {
+  height: 60px;
+  margin-bottom: 20px;
+}
+.x a:hover {
+  text-decoration: none;
+}
+.x svg {
+  width: 50px;
+  height: 50px;
+  -moz-transition: width 0.1s, height 0.1s, margin 0.1s;
+  -webkit-transition: width 0.1s, height 0.1s, margin 0.1s;
+  -o-transition: width 0.1s, height 0.1s, margin 0.1s;
+  transition: width 0.1s, height 0.1s, margin 0.1s;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  margin: 5px;
+}
+.x svg:hover {
+  width: 60px;
+  height: 60px;
+  margin: 0;
+}
 /*# sourceMappingURL=main.css.map */
