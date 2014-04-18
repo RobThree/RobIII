@@ -19,5 +19,5 @@
     Google Hosted Libraries (CDN)   --                    -- http://developers.google.com/speed/libraries/
     jQuery                          --                    -- http://jquery.com/
     respond.js                      -- Scott Jehl         -- http://github.com/scottjehl/Respond
-	Social Media icons				--                    -- http://enfuzed.com/90-free-flat-social-media-icons/
-	My ugly potato					-- Me                 -- http://gravatar.com/
+    Social Media icons              --                    -- http://enfuzed.com/90-free-flat-social-media-icons/
+    My ugly potato                  -- Me                 -- http://gravatar.com/
