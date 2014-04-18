@@ -7,6 +7,7 @@ namespace MvcBootstrap
         public static void RegisterBundles(BundleCollection bundles)
         {
             //Bootstrap.js / jQuery and modernizr/respond.js are loaded from CDN or separately
+            //TODO: Take a look at http://www.asp.net/mvc/tutorials/mvc-4/bundling-and-minification; turns out CDN's can be used/specified here too! Coolio!
 
             bundles.Add(new ScriptBundle("~/bundles/js").Include(
                         "~/js/main.js"
