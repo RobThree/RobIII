@@ -108,14 +108,13 @@ a:focus {
   color: #fff;
 }
 /* SOCIAL ICONS */
-.x {
-  height: 60px;
+.site-logos {
   margin-bottom: 20px;
 }
-.x a:hover {
+.site-logos a:hover {
   text-decoration: none;
 }
-.x svg {
+.site-logos svg {
   width: 50px;
   height: 50px;
   -moz-transition: width 0.1s, height 0.1s, margin 0.1s;
@@ -128,7 +127,7 @@ a:focus {
   transition-timing-function: ease-in-out;
   margin: 5px;
 }
-.x svg:hover {
+.site-logos svg:hover {
   width: 60px;
   height: 60px;
   margin: 0;
