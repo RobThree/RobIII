@@ -1,6 +1,7 @@
 $(document).ready(function () {
     $('#nav a').click(function (e) {
-        e.preventDefault()
-        $(this).tab('show')
-    })
+        e.preventDefault();
+        $(this).tab('show');
+    });
+    $('#nav-tabs .tab-pane:empty').append($('<i>').addClass('loader glyphicon glyphicon-refresh'));
 });
