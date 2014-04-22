@@ -1,0 +1,33 @@
+﻿@model BlogrollViewmodel
+
+@foreach (var i in Model.PagedList)
+{
+
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
+            <div class="time text-right">
+                @if (i.Date > DateTime.Now.AddMonths(-3))
+                {
+                    <span class="badge">New</span>
+                }
+                @i.Date.ToString("yyyy-MM-dd") <small>@i.Date.ToString("HH:mm:ss")</small>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <h3><a href="@i.Uri">@i.Title</a></h3>
+            <p>@i.GetContent() <small class="pull-right"><a href="@i.Uri" target="_blank">Read more &raquo;</a></small></p>
+        </div>
+    </div>
+
+}
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        @Html.PagedListPager(Model.PagedList, p => Url.RouteUrl("Blogroll", new
+           {
+               language = Model.Language,
+               page = p,
+               pagesize = Model.PagedList.PageSize != 5 ? (int?)Model.PagedList.PageSize : null
+           }) + "#nav", PagingOptions.Default)
+    </div>
+</div>

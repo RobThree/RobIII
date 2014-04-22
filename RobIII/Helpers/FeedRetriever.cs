@@ -9,10 +9,8 @@ namespace RobIII.Helpers
 {
     public enum FeedLanguage
     {
-        Unknown,
-        English,
-        Dutch,
-        All
+        EN,
+        NL
     }
 
     public class Feed
@@ -29,8 +27,8 @@ namespace RobIII.Helpers
         //TODO: Move to config or something
         public static readonly List<Feed> Feeds = new List<Feed>(
             new[] {
-                new Feed { Language = FeedLanguage.Dutch, Uri = "http://robiii.tweakblogs.net/feed/" },
-                new Feed { Language = FeedLanguage.English, Uri = "http://blog.robiii.nl/feeds/posts/default?alt=rss" },
+                new Feed { Language = FeedLanguage.NL, Uri = "http://robiii.tweakblogs.net/feed/" },
+                new Feed { Language = FeedLanguage.EN, Uri = "http://blog.robiii.nl/feeds/posts/default?alt=rss" },
             }
         );
 
@@ -42,12 +40,21 @@ namespace RobIII.Helpers
             this.DefaultTTL = defaultTTL;
         }
 
-        public IEnumerable<FeedItem> RetrieveFeeds(IEnumerable<Feed> feeds)
+        public IQueryable<FeedItem> GetByLanguage(string language)
         {
-            return this.RetrieveFeeds(feeds, this.DefaultTTL);
+            return this.GetByLanguage(language, this.DefaultTTL);
         }
 
-        public IEnumerable<FeedItem> RetrieveFeeds(IEnumerable<Feed> feeds, TimeSpan ttl)
+        public IQueryable<FeedItem> GetByLanguage(string language, TimeSpan ttl)
+        {
+            return this.RetrieveFeeds(
+                FeedRetriever.Feeds.Where(f => "all".Equals(language, StringComparison.OrdinalIgnoreCase) || f.Language.ToString().Equals(language, StringComparison.OrdinalIgnoreCase)),
+                ttl
+            )
+            .AsQueryable();
+        }
+
+        private IEnumerable<FeedItem> RetrieveFeeds(IEnumerable<Feed> feeds, TimeSpan ttl)
         {
             var items = new List<FeedItem>();
             foreach (var f in feeds)
@@ -61,7 +68,7 @@ namespace RobIII.Helpers
                 );
             }
 
-            return items;
+            return items.OrderByDescending(i => i.Date);
         }
     }
 }

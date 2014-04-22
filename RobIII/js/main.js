@@ -3,5 +3,5 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).tab('show');
     });
-    $('#nav-tabs .tab-pane:empty').append($('<i>').addClass('loader glyphicon glyphicon-refresh'));
+    $('#nav-tabs .tab-pane:empty').append($('<div>').addClass('loader').append($('<i>').addClass('glyphicon glyphicon-refresh')));
 });
