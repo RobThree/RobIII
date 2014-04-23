@@ -158,6 +158,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\BlogrollController.cs" />
+    <Compile Include="Helpers\ModelExtensions.cs" />
     <Compile Include="Helpers\PagingOptions.cs" />
     <Compile Include="Helpers\FeedRetriever.cs" />
     <Compile Include="Helpers\RobIIIFeedNormalizer.cs" />

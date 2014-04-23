@@ -104,10 +104,28 @@ footer {
     font-size: .6em;
 }
 
+.nav-pills {
+    font-size: .7em;
+}
+
+    .nav-pills > li.active > a,
+    .nav-pills > li.active > a:hover,
+    .nav-pills > li.active > a:focus {
+        background-color: #ccc;
+    }
+
+    .nav-pills > li > a {
+        padding: 0;
+    }
+
+    .nav-pills svg {
+        vertical-align: middle;
+    }
+
 a,
 a:active,
 a:visited,
-.pagination>li>a, .pagination>li>span {
+.pagination > li > a, .pagination > li > span {
     color: @primarycolor;
 }
 
@@ -139,15 +157,20 @@ a:visited,
 @icons_margin: (@icons_hover - @icons_normal) / 2;
 @icons_speed: .1s;
 
-.site-logos {
+.flag {
+    width: 30px;
+    height: 16px;
+}
+
+.svg-logos {
     margin-bottom: 20px;
 }
 
-    .site-logos a:hover {
+    .svg-logos a:hover {
         text-decoration: none;
     }
 
-    .site-logos svg {
+    .svg-logos svg {
         width: @icons_normal;
         height: @icons_normal;
         -moz-transition: width @icons_speed, height @icons_speed, margin @icons_speed;
@@ -161,7 +184,7 @@ a:visited,
         margin: @icons_margin;
     }
 
-        .site-logos svg:hover {
+        .svg-logos svg:hover {
             width: @icons_hover;
             height: @icons_hover;
             margin: 0;

@@ -85,6 +85,20 @@ footer {
   margin-top: 80px;
   font-size: .6em;
 }
+.nav-pills {
+  font-size: .7em;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  background-color: #ccc;
+}
+.nav-pills > li > a {
+  padding: 0;
+}
+.nav-pills svg {
+  vertical-align: middle;
+}
 a,
 a:active,
 a:visited,
@@ -110,13 +124,17 @@ a:focus {
   color: #fff;
 }
 /* SOCIAL ICONS */
-.site-logos {
+.flag {
+  width: 30px;
+  height: 16px;
+}
+.svg-logos {
   margin-bottom: 20px;
 }
-.site-logos a:hover {
+.svg-logos a:hover {
   text-decoration: none;
 }
-.site-logos svg {
+.svg-logos svg {
   width: 50px;
   height: 50px;
   -moz-transition: width 0.1s, height 0.1s, margin 0.1s;
@@ -129,7 +147,7 @@ a:focus {
   transition-timing-function: ease-in-out;
   margin: 5px;
 }
-.site-logos svg:hover {
+.svg-logos svg:hover {
   width: 60px;
   height: 60px;
   margin: 0;
