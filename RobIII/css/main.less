@@ -104,24 +104,6 @@ footer {
     font-size: .6em;
 }
 
-.nav-pills {
-    font-size: .7em;
-}
-
-    .nav-pills > li.active > a,
-    .nav-pills > li.active > a:hover,
-    .nav-pills > li.active > a:focus {
-        background-color: #ccc;
-    }
-
-    .nav-pills > li > a {
-        padding: 0;
-    }
-
-    .nav-pills svg {
-        vertical-align: middle;
-    }
-
 a,
 a:active,
 a:visited,
@@ -135,6 +117,17 @@ a:visited,
         text-decoration: underline;
     }
 
+.language-selector {
+    font-size: .8em;
+}
+
+.language-selector a {
+    color: #999;
+}
+
+.language-selector a.active {
+    color: @primarycolor;
+}
 
 ::-moz-selection {
     background: @primarycolor;
