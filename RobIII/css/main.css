@@ -67,6 +67,9 @@ body {
 .time span {
   white-space: nowrap;
 }
+h2 {
+  margin-bottom: 40px;
+}
 h3 {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
@@ -123,11 +126,19 @@ a:focus {
   width: 30px;
   height: 16px;
 }
-.svg-logos {
-  margin-bottom: 20px;
+.contact-methods {
+  list-style-type: none;
 }
+.contact-methods svg {
+  width: 25px;
+  height: 25px;
+}
+.contact-methods a:hover,
 .svg-logos a:hover {
   text-decoration: none;
+}
+.svg-logos {
+  margin-bottom: 20px;
 }
 .svg-logos svg {
   width: 50px;
@@ -146,6 +157,17 @@ a:focus {
   width: 60px;
   height: 60px;
   margin: 0;
+}
+#code ul {
+  list-style-type: none;
+  padding: 0;
+}
+#code svg,
+.contact-methods svg {
+  vertical-align: middle;
+}
+.hd {
+  display: none;
 }
 /* Ajax / tab-loaders */
 .loader {

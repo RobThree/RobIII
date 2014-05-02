@@ -145,7 +145,7 @@
     <Content Include="js\vendor\bootstrap.min.js" />
     <Content Include="js\vendor\handlebars.runtime-v1.3.0.js" />
     <Content Include="js\vendor\jquery-2.1.0.min.js" />
-    <Content Include="js\vendor\modernizr-2.7.2.js" />
+    <Content Include="js\vendor\modernizr-2.8.1.js" />
     <Content Include="js\vendor\respond-1.4.2.js" />
     <Content Include="robots.txt" />
     <Content Include="Web.config" />
