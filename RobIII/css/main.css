@@ -129,10 +129,6 @@ a:focus {
 .contact-methods {
   list-style-type: none;
 }
-.contact-methods svg {
-  width: 25px;
-  height: 25px;
-}
 .contact-methods a:hover,
 .svg-logos a:hover {
   text-decoration: none;
@@ -140,6 +136,7 @@ a:focus {
 .svg-logos {
   margin-bottom: 20px;
 }
+.contact-methods svg,
 .svg-logos svg {
   width: 50px;
   height: 50px;
@@ -153,6 +150,7 @@ a:focus {
   transition-timing-function: ease-in-out;
   margin: 5px;
 }
+.contact-methods svg:hover,
 .svg-logos svg:hover {
   width: 60px;
   height: 60px;
