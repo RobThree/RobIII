@@ -177,6 +177,7 @@
     </Compile>
     <Compile Include="Helpers\CacheExtensions.cs" />
     <Compile Include="Models\BlogrollViewmodel.cs" />
+    <Compile Include="Models\ContactformViewmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
