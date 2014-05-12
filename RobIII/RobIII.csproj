@@ -159,6 +159,12 @@
     <Content Include="robots.txt" />
     <Content Include="Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
