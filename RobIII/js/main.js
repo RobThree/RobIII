@@ -22,7 +22,7 @@ $(document).ready(function () {
             // Now post the data
             $.post('/api/contactform', data).done(function (result) {
                 // We should receive an array of errors; when it's length == 0 we have no errors
-                if (result.length == 0) {
+                if (result.length === 0) {
                     // Hide alle form groups; no need to fill out a form twice
                     f.find('.form-group, p').slideUp();
                     // Tell user everything was OK
