@@ -113,6 +113,7 @@ a:active,
 a:visited,
 .pagination > li > a, .pagination > li > span {
     color: @primarycolor;
+    cursor: pointer;
 }
 
     a:hover,
@@ -120,6 +121,14 @@ a:visited,
         color: @primarycolor;
         text-decoration: underline;
     }
+
+.fb {
+    background-color: #7290C9;
+    color: #fff;
+    font-weight: bold;
+    font-family: Helvetica,Arial,'lucida grande',tahoma,verdana,arial,sans-serif;
+    padding: 3px 10px;
+}
 
 .language-selector {
     font-size: .8em;
@@ -231,7 +240,7 @@ a:visited,
 
 .wait,
 .wait a {
-  cursor: progress;
+    cursor: progress;
 }
 
 @-moz-keyframes spin {

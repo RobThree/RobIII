@@ -3,6 +3,11 @@ $(document).ready(function () {
         e.preventDefault();
         $(this).tab('show');
     });
+    $('a[data-tab-destination]').on('click', function (e) {
+        e.preventDefault();
+        var tab = $(this).attr('data-tab-destination');
+        $('#nav a[href="#' + tab + '"]').tab('show');
+    });
     $('#nav-tabs .tab-pane:empty').append($('<div>').addClass('loader').append($('<i>').addClass('glyphicon glyphicon-refresh')));
 
     // Handle contact-form submit
