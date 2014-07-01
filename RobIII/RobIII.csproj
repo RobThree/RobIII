@@ -149,6 +149,8 @@
     <Content Include="Global.asax" />
     <Content Include="humans.txt" />
     <Content Include="img\back.jpg" />
+    <Content Include="img\profileimage.png" />
+    <Content Include="img\recruiters.png" />
     <Content Include="js\main.js" />
     <Content Include="js\vendor\bootstrap.js" />
     <Content Include="js\vendor\bootstrap.min.js" />
