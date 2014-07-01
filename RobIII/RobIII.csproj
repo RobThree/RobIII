@@ -161,7 +161,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\_ViewStart.cshtml" />
-    <Content Include="Views\Shared\_WallOfShame.cshtml" />
+    <Content Include="Views\Static\WallOfShame.cshtml" />
+    <Content Include="Views\Static\Read.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -176,7 +177,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\APIController.cs" />
     <Compile Include="Controllers\BlogrollController.cs" />
+    <Compile Include="Controllers\StaticController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
+    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
     <Compile Include="Helpers\ModelExtensions.cs" />
     <Compile Include="Helpers\PagingOptions.cs" />
     <Compile Include="Helpers\FeedRetriever.cs" />
@@ -185,6 +188,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Helpers\CacheExtensions.cs" />
+    <Compile Include="Helpers\StaticPageConstraint.cs" />
     <Compile Include="Models\BlogrollViewmodel.cs" />
     <Compile Include="Models\ContactformViewmodel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -200,8 +204,8 @@
     <Content Include="js\vendor\jquery-2.1.0.min.map" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Blogroll\Index.cshtml" />
-    <Content Include="Views\Shared\_Contact.cshtml" />
-    <Content Include="Views\Shared\_Code.cshtml" />
+    <Content Include="Views\Static\Contact.cshtml" />
+    <Content Include="Views\Static\Code.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

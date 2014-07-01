@@ -1,4 +1,6 @@
-﻿using System.Web.Mvc;
+﻿using RobIII.Helpers;
+using System.Web.Mvc;
+using System.Web.Mvc.Routing;
 using System.Web.Routing;
 
 namespace RobIII
@@ -9,7 +11,10 @@ namespace RobIII
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
-            routes.MapMvcAttributeRoutes();
+            var constraintResolver = new DefaultInlineConstraintResolver();
+            constraintResolver.ConstraintMap.Add("static", typeof(StaticPageConstraint));
+
+            routes.MapMvcAttributeRoutes(constraintResolver);
         }
     }
 }

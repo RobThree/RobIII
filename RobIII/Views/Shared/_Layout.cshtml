@@ -43,23 +43,14 @@
     <div class="container container-fluid">
         <div class="row">
             <ul id="nav" class="nav nav-tabs nav-justified">
-                <li class="active"><a href="#blogroll">I write</a></li>
-                <li><a href="#code">I code</a></li>
-                <li><a href="#read">I read</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li class="@(@ViewContext.Controller is BlogrollController ? "active" : "")">@Html.ActionLink("I write", "Index", "Blogroll")</li>
+                <li class="@(Html.ActivePage<StaticController>("page", "code"))">@Html.ActionLink("I code", "Index", "Static", new { Page = "code" }, null)</li>
+                <li class="@(Html.ActivePage<StaticController>("page", "read"))">@Html.ActionLink("I read", "Index", "Static", new { Page = "read" }, null)</li>
+                <li class="@(Html.ActivePage<StaticController>("page", "contact"))">@Html.ActionLink("Contact", "Index", "Static", new { Page = "contact" }, null)</li>
             </ul>
 
-            <div id="nav-tabs" class="tab-content">
-                <div class="tab-pane active fade in" id="blogroll">
-                    @RenderBody()
-                </div>
-                <div class="tab-pane fade" id="code">
-                   @Html.Partial("_Code")
-                </div>
-                <div class="tab-pane fade" id="read"><p class="alert alert-info">Sorry, nothing here yet.</p></div>
-                <div class="tab-pane fade" id="contact">
-                    @Html.Partial("_Contact")
-                </div>
+            <div class="tab-content">
+                @RenderBody()
             </div>
         </div>
     </div>
