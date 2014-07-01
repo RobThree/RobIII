@@ -1,4 +1,10 @@
 $(document).ready(function () {
+    // Lightbox
+    $(document).delegate('*[data-toggle="lightbox"]', 'click', function (event) {
+        event.preventDefault();
+        $(this).ekkoLightbox();
+    });
+
     // Handle contact-form submit
     $("#contact-form").on("submit", function (event) {
         event.preventDefault();
