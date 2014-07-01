@@ -108,14 +108,33 @@ a:focus {
   font-family: Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
   padding: 3px 10px;
 }
-.language-selector {
+.language-selector,
+.pocket-selector {
   font-size: .8em;
 }
-.language-selector a {
+.language-selector a,
+.pocket-selector a {
   color: #999;
 }
-.language-selector a.active {
+.language-selector a.active,
+.pocket-selector a.active {
   color: #ed053e;
+}
+.smalltext {
+  font-size: .6em;
+  line-height: 1.5em;
+  font-style: italic;
+}
+.disclaimer {
+  font-size: .6em;
+  line-height: 1.5em;
+  font-style: italic;
+}
+.excerpt {
+  font-size: .6em;
+  line-height: 1.5em;
+  font-style: italic;
+  margin-left: 25px;
 }
 ::-moz-selection {
   background: #ed053e;

@@ -18,5 +18,15 @@ namespace RobIII.Helpers
             return model.Language.Equals(language, StringComparison.OrdinalIgnoreCase) ? "active" : null;
         }
 
+
+        public static string IsCurrentStatus(this PocketViewmodel model, PocketStatus status)
+        {
+            return IsCurrentStatus(model, status.ToString());
+        }
+
+        public static string IsCurrentStatus(this PocketViewmodel model, string status)
+        {
+            return model.Status.Equals(status, StringComparison.OrdinalIgnoreCase) ? "active" : null;
+        }
     }
 }

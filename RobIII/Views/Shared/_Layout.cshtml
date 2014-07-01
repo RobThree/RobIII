@@ -43,9 +43,9 @@
     <div class="container container-fluid">
         <div class="row">
             <ul id="nav" class="nav nav-tabs nav-justified">
-                <li class="@(@ViewContext.Controller is BlogrollController ? "active" : "")">@Html.ActionLink("I write", "Index", "Blogroll")</li>
+                <li class="@(Html.ActivePage<BlogrollController>())">@Html.ActionLink("I write", "Index", "Blogroll")</li>
                 <li class="@(Html.ActivePage<StaticController>("page", "code"))">@Html.ActionLink("I code", "Index", "Static", new { Page = "code" }, null)</li>
-                <li class="@(Html.ActivePage<StaticController>("page", "read"))">@Html.ActionLink("I read", "Index", "Static", new { Page = "read" }, null)</li>
+                <li class="@(Html.ActivePage<PocketController>())">@Html.ActionLink("I read", "Index", "Pocket", new { Status = "all" }, null)</li>
                 <li class="@(Html.ActivePage<StaticController>("page", "contact"))">@Html.ActionLink("Contact", "Index", "Static", new { Page = "contact" }, null)</li>
             </ul>
 

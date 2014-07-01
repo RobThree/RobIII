@@ -1,0 +1,45 @@
+﻿@model PocketViewmodel
+
+<p class="text-center pocket-selector">
+    <a class="@Model.IsCurrentStatus("All")" href="@Url.RouteUrl("Pocket", new { status = "All", page = 1, pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null, search = Model.Search })#nav"><span class="glyphicon glyphicon-star"></span> All</a>
+    |
+    <a class="@Model.IsCurrentStatus(PocketStatus.Unread)" href="@Url.RouteUrl("Pocket", new { status = PocketStatus.Unread, page = 1, pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null, search = Model.Search })#nav"><span class="glyphicon glyphicon-bookmark"></span> Unread</a>
+    |
+    <a class="@Model.IsCurrentStatus(PocketStatus.Read)" href="@Url.RouteUrl("Pocket", new { status = PocketStatus.Read, page = 1, pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null, search = Model.Search })#nav"><span class="glyphicon glyphicon-ok"></span> Read</a>
+</p>
+
+<form class="navbar-form navbar-right" method="get" action="/pocket/@Model.Status#nav" role="search">
+    <div class="form-group">
+        <input type="text" name="search" accesskey="q" class="form-control" placeholder="Search..." value="@Model.Search">
+    </div>
+    <button type="submit" class="btn btn-default">Search</button>
+</form>
+
+<div class="row">
+    <div class="col-md-10 col-md-offset-1">
+        @foreach (var i in Model.PagedList)
+        {
+            <span class="glyphicon @(i.Status == PocketStatus.Unread ? "glyphicon-ok" : "glyphicon-bookmark")"></span>
+            <a href="@i.Uri" title="Added: @i.AddTime.Value.ToString("yyyy-MM-dd") Status: @i.Status">@i.GetTitle()</a><br />
+            <p class="excerpt">@i.Excerpt</p>
+        }
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12 text-center">
+        @Html.PagedListPager(Model.PagedList, p => Url.RouteUrl("Pocket", new
+           {
+               status = Model.Status,
+               page = p,
+               pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null,
+               search = Model.Search
+           }) + "#nav", PagingOptions.Default)
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6 col-md-offset-3">
+        <p class="text-center text-muted disclaimer">This Read-It-Later-list is just that, bookmarks of stuff I intend to read or have read. I do not necessarily agree with opinions or statements in the bookmarked articles.</p>
+    </div>
+</div>

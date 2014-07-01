@@ -1,12 +1,15 @@
 ﻿using RobIII.Helpers;
 using RobIII.Models;
 using SimpleFeedReader;
+using Dapper;
 using System;
 using System.Configuration;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net.Mail;
 using System.Web;
 using System.Web.Http;
+using System.Collections.Generic;
 
 namespace RobIII.Controllers
 {
@@ -23,6 +26,53 @@ namespace RobIII.Controllers
         {
             return new FeedRetriever().GetByLanguage(language);
         }
+
+        [Route("pocket/{status}/{page:int?}/{pagesize:int?}")]
+        public IEnumerable<PocketItem> GetPocket(string status, int page = 1, int pageSize = 10, string search = null)
+        {
+            return this.GetPocket(status, search).Skip((page - 1) * pageSize).Take(pageSize);
+        }
+
+        public IEnumerable<PocketItem> GetPocket(string status, string search = null)
+        {
+            int? statuscode = null;
+            string query = null;
+
+            switch (status.ToLowerInvariant())
+            {
+                case "read":
+                    statuscode = 1;
+                    break;
+                case "unread":
+                    statuscode = 0;
+                    break;
+                default:
+                    statuscode = null;
+                    break;
+            }
+
+            using (var conn = new SqlConnection(ConfigurationManager.ConnectionStrings["riii_db"].ConnectionString))
+            {
+                conn.Open();
+
+                if (!string.IsNullOrEmpty(search))
+                    query = '%' + search.Replace(@"\", @"\\").Replace("%", @"\%").Replace("_", @"\_").Replace("_", @"\_").Replace("[", @"\[").Replace("]", @"\]") + '%';
+
+                return conn.Query<PocketItem>(
+                    @"SELECT * FROM [dbo].[pocketbookmarks] 
+                        Where ((@Status is null) or ([status] = @Status))
+                            AND ((@Search is null) or (([title] like @Search ESCAPE '\') or ([fulltitle] like @Search ESCAPE '\') or ([excerpt] like @Search ESCAPE '\')))
+                            AND ([isdeleted] = 0)
+                        ORDER BY [addtime] desc",
+                    new
+                    {
+                        Status = statuscode,
+                        Search = query
+                    }
+                );
+            }
+        }
+        
 
         [Route("contactform")]
         [HttpPost]
