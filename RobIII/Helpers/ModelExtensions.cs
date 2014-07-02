@@ -40,5 +40,18 @@ namespace RobIII.Helpers
         {
             return model.Status.Equals(status, StringComparison.OrdinalIgnoreCase) ? "active" : null;
         }
+
+        public static string GetStatusString(this PocketViewmodel model, string defaultString = null)
+        {
+            switch (model.Status.ToLowerInvariant())
+            {
+                case "read":
+                    return "Read";
+                case "unread":
+                    return "Unread";
+                default:
+                    return defaultString;
+            }
+        }
     }
 }

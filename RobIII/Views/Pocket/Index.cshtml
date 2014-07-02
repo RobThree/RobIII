@@ -1,6 +1,6 @@
 ﻿@model PocketViewmodel
 @{
-    Page.Title = string.Format("I read... (page {0} of {1})", Model.PagedList.PageNumber, Model.PagedList.PageCount);
+    Page.Title = string.Format("I read... ({0}, page {1} of {2})", Model.GetStatusString("All"), Model.PagedList.PageNumber, Model.PagedList.PageCount);
 }
 
 <p class="text-center pocket-selector">
