@@ -1,4 +1,9 @@
 ﻿@model BlogrollViewmodel
+@{
+    if (Model.PagedList.PageNumber > 1) { 
+        Page.Title = string.Format("I write... ({0}, page {1} of {2})", Model.GetLanguageString("All languages"), Model.PagedList.PageNumber, Model.PagedList.PageSize);
+    }
+}
 
 <p class="text-center language-selector">
     <a class="@Model.IsCurrentLanguage("All")" href="@Url.RouteUrl("Blogroll", new { language = "All", page = 1, pagesize = Model.PagedList.PageSize != 5 ? (int?)Model.PagedList.PageSize : null })#nav">All</a>

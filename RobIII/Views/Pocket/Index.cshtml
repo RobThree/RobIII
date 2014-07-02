@@ -1,4 +1,7 @@
 ﻿@model PocketViewmodel
+@{
+    Page.Title = string.Format("I read... (page {0} of {1})", Model.PagedList.PageNumber, Model.PagedList.PageSize);
+}
 
 <p class="text-center pocket-selector">
     <a class="@Model.IsCurrentStatus("All")" href="@Url.RouteUrl("Pocket", new { status = "All", page = 1, pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null, search = Model.Search })#nav"><span class="glyphicon glyphicon-star"></span> All</a>

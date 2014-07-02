@@ -3,17 +3,17 @@
 <head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>RobIII</title>
-    <meta name="description" content="RobIII">
+    <title>@(string.IsNullOrEmpty(Page.Title) ? string.Empty : Page.Title + " | ")RobIII</title>
+    <meta name="description" content="@Page.Description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400">
     @Styles.Render("~/bundles/css")
     @Styles.Render("~/bundles/js-head")
 
-    <meta property="og:title" content="RobIII">
+    <meta property="og:title" content="@(string.IsNullOrEmpty(Page.Title) ? string.Empty : Page.Title + " | ")RobIII">
     <meta property="og:url" content="http://robiii.nl/">
     <meta property="og:image" content="http://robiii.nl/img/back.jpg">
-    <meta property="og:description" content="RobIII" />
+    <meta property="og:description" content="@Page.Description" />
     <meta property="og:locale" content="en-US" />
 </head>
 

@@ -18,6 +18,18 @@ namespace RobIII.Helpers
             return model.Language.Equals(language, StringComparison.OrdinalIgnoreCase) ? "active" : null;
         }
 
+        public static string GetLanguageString(this BlogrollViewmodel model, string defaultString = null)
+        {
+            switch (model.Language.ToLowerInvariant())
+            {
+                case "en":
+                    return "English";
+                case "nl":
+                    return "Nederlands";
+                default:
+                    return defaultString;
+            }
+        }
 
         public static string IsCurrentStatus(this PocketViewmodel model, PocketStatus status)
         {
