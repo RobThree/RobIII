@@ -20,8 +20,8 @@ namespace RobIII.Helpers
 							DisplayLinkToNextPage = PagedListDisplayMode.Always,
 				       		DisplayLinkToIndividualPages = false,
 				       		DisplayPageCountAndCurrentLocation = true,
-                            LinkToPreviousPageFormat = "&larr; Older",
-			                LinkToNextPageFormat = "Newer &rarr;",
+                            LinkToPreviousPageFormat = "&larr; Newer",
+			                LinkToNextPageFormat = "Older &rarr;",
 			                PageCountAndCurrentLocationFormat = "Page {0} of {1}",
 			                FunctionToDisplayEachPageNumber = null
 				       	};
