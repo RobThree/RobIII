@@ -200,6 +200,10 @@ blockquote {
   line-height: 1.5em;
   font-style: italic;
 }
+.redacted {
+  border-bottom: 1px dashed #ed053e;
+  cursor: help;
+}
 /* Ajax / tab-loaders */
 .loader {
   padding: 40px;
