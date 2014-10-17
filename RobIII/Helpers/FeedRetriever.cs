@@ -68,7 +68,7 @@ namespace RobIII.Helpers
                 );
             }
 
-            return items.OrderByDescending(i => i.Date);
+            return items.OrderByDescending(i => i.PublishDate);
         }
     }
 }
