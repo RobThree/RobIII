@@ -19,13 +19,13 @@
 
         <div class="row">
             <div class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
-                <div class="time text-right">
+                <div class="time text-right" title="@i.PublishDate.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ssZ")">
                     @if (i.PublishDate > DateTime.Now.AddMonths(-3))
                     {
                         <span class="badge">New</span>
                     }
-                    @i.PublishDate.ToString("yyyy-MM-dd")<br />
-                    <small>@i.PublishDate.ToString("HH:mm:ss")</small>
+                    @i.PublishDate.ToLocalTime().ToString("yyyy-MM-dd")<br />
+                    <small>@i.PublishDate.ToLocalTime().ToString("HH:mm:ss")</small>
                 </div>
             </div>
             <div class="col-md-8">
