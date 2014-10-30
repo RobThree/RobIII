@@ -142,6 +142,9 @@ a:focus {
   font-style: italic;
   margin-left: 25px;
 }
+.pagination {
+  font-size: 1.5rem;
+}
 ::-moz-selection {
   background: #ed053e;
   color: #fff;
@@ -233,6 +236,9 @@ blockquote {
 @media (min-width: 768px) {
   .site-head {
     height: 300px;
+  }
+  .pagination {
+    font-size: inherit;
   }
 }
 @media (min-width: 992px) {

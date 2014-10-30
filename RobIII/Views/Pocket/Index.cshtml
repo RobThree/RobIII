@@ -18,15 +18,13 @@
     <button type="submit" class="btn btn-default">Search</button>
 </form>
 
-<div class="row">
-    <div class="col-md-10 col-md-offset-1">
-        @foreach (var i in Model.PagedList)
-        {
-            <span class="glyphicon @(i.Status == PocketStatus.Read ? "glyphicon-ok" : "glyphicon-bookmark")"></span>
-            <a href="@i.Uri" title="Added: @i.AddTime.Value.ToString("yyyy-MM-dd") Status: @i.Status">@i.GetTitle()</a><br />
-            <p class="excerpt">@i.Excerpt</p>
-        }
-    </div>
+<div class="col-md-10 col-md-offset-1">
+    @foreach (var i in Model.PagedList)
+    {
+        <span class="glyphicon @(i.Status == PocketStatus.Read ? "glyphicon-ok" : "glyphicon-bookmark")"></span>
+        <a href="@i.Uri" title="Added: @i.AddTime.Value.ToString("yyyy-MM-dd") Status: @i.Status">@i.GetTitle()</a><br />
+        <p class="excerpt">@i.Excerpt</p>
+    }
 </div>
 
 <div class="row">
