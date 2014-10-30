@@ -8,8 +8,7 @@ body {
 }
 #user-image {
   background-image: url('//www.gravatar.com/avatar/9814828bd8d94a47c12461f364baaa82?s=440');
-  margin-top: 25px;
-  float: right;
+  margin: 25px auto 0 auto;
   width: 110px;
   height: 110px;
   -moz-background-size: cover;
@@ -28,10 +27,10 @@ body {
     */
 }
 .site-head {
-  padding-top: 250px;
   color: #fff;
-  height: 550px;
+  height: 230px;
   background: url('/img/back.jpg');
+  padding-top: 0;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
@@ -56,6 +55,10 @@ body {
   letter-spacing: 0;
   -webkit-text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+.site-title,
+.site-description {
+  text-align: center;
 }
 .tab-content {
   padding: 0 20px;
@@ -226,6 +229,21 @@ blockquote {
 .wait,
 .wait a {
   cursor: progress;
+}
+@media (min-width: 768px) {
+  .site-head {
+    height: 300px;
+  }
+}
+@media (min-width: 992px) {
+  .site-head {
+    height: 550px;
+    padding-top: 250px;
+  }
+  .site-title,
+  .site-description {
+    text-align: left;
+  }
 }
 @-moz-keyframes spin {
   100% {
