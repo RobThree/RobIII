@@ -27,21 +27,17 @@
     }
 </div>
 
-<div class="row">
-    <div class="col-md-12 text-center">
-        @Html.PagedListPager(Model.PagedList, p => Url.RouteUrl("Pocket", new
-           {
-               status = Model.Status,
-               page = p,
-               pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null,
-               search = Model.Search
-           }) + "#nav", PagingOptions.Default)
-    </div>
+<div class="col-md-12 text-center">
+    @Html.PagedListPager(Model.PagedList, p => Url.RouteUrl("Pocket", new
+    {
+        status = Model.Status,
+        page = p,
+        pagesize = Model.PagedList.PageSize != 10 ? (int?)Model.PagedList.PageSize : null,
+        search = Model.Search
+    }) + "#nav", PagingOptions.Default)
 </div>
 
-<div class="row">
-    <div class="col-md-6 col-md-offset-3">
-        <p class="text-center text-muted disclaimer">This Read-It-Later-list is just that, bookmarks of stuff I intend to read or have read. I do not necessarily agree with opinions or statements in the bookmarked articles.</p>
-        <p class="text-center text-muted">This list is compiled from my <a href="https://getpocket.com/">Pocket</a> list.</p>
-    </div>
+<div class="col-md-6 col-md-offset-3">
+    <p class="text-center text-muted disclaimer">This Read-It-Later-list is just that, bookmarks of stuff I intend to read or have read. I do not necessarily agree with opinions or statements in the bookmarked articles.</p>
+    <p class="text-center text-muted">This list is compiled from my <a href="https://getpocket.com/">Pocket</a> list.</p>
 </div>
