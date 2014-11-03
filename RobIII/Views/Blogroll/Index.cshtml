@@ -1,6 +1,7 @@
 ﻿@model BlogrollViewmodel
 @{
-    if (Model.PagedList.PageNumber > 1) { 
+    if (Model.PagedList.PageNumber > 1)
+    {
         Page.Title = string.Format("I write... ({0}, page {1} of {2})", Model.GetLanguageString("All languages"), Model.PagedList.PageNumber, Model.PagedList.PageCount);
     }
 }
@@ -13,27 +14,25 @@
     <a class="@Model.IsCurrentLanguage(FeedLanguage.NL)" href="@Url.RouteUrl("Blogroll", new { language = FeedLanguage.NL, page = 1, pagesize = Model.PagedList.PageSize != 5 ? (int?)Model.PagedList.PageSize : null })#nav">Nederlands</a>
 </p>
 
-<div class="row">
-    @foreach (var i in Model.PagedList)
-    {
-
-            <div class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
-                <div class="time text-right" title="@i.PublishDate.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ssZ")">
-                    @if (i.PublishDate > DateTime.Now.AddMonths(-3))
-                    {
-                        <span class="badge">New</span>
-                    }
-                    @i.PublishDate.ToLocalTime().ToString("yyyy-MM-dd")<br />
-                    <small>@i.PublishDate.ToLocalTime().ToString("HH:mm:ss")</small>
-                </div>
+@foreach (var i in Model.PagedList)
+{
+    <div class="row">
+        <div class="col-md-2 col-md-offset-1 hidden-sm hidden-xs">
+            <div class="time text-right" title="@i.PublishDate.ToUniversalTime().ToString("yyyy-MM-dd HH:mm:ssZ")">
+                @if (i.PublishDate > DateTime.Now.AddMonths(-3))
+                {
+                    <span class="badge">New</span>
+                }
+                @i.PublishDate.ToLocalTime().ToString("yyyy-MM-dd")<br />
+                <small>@i.PublishDate.ToLocalTime().ToString("HH:mm:ss")</small>
             </div>
-            <div class="col-md-8">
-                <h3><a href="@i.Uri">@i.Title</a></h3>
-                <p>@i.GetContent() <small class="pull-right"><a href="@i.Uri" target="_blank">Read more &raquo;</a></small></p>
-            </div>
-
-    }
-</div>
+        </div>
+        <div class="col-md-8">
+            <h3><a href="@i.Uri">@i.Title</a></h3>
+            <p>@i.GetContent() <small class="pull-right"><a href="@i.Uri" target="_blank">Read more &raquo;</a></small></p>
+        </div>
+    </div>
+}
 
 <div class="row">
     <div class="col-md-12 text-center">
