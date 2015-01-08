@@ -65,7 +65,7 @@ body {
 }
 .time {
   margin-top: 20px;
-  color: #999;
+  color: #999999;
 }
 .time .badge {
   margin-right: 10px;
@@ -120,7 +120,7 @@ a:focus {
 }
 .language-selector a,
 .pocket-selector a {
-  color: #999;
+  color: #999999;
 }
 .language-selector a.active,
 .pocket-selector a.active {
@@ -204,7 +204,7 @@ a:focus {
   display: none;
 }
 blockquote {
-  color: #999;
+  color: #999999;
   font-size: .6em;
   line-height: 1.5em;
   font-style: italic;
@@ -212,6 +212,13 @@ blockquote {
 .redacted {
   border-bottom: 1px dashed #ed053e;
   cursor: help;
+}
+.recruitershame {
+  fill: #999999;
+}
+.recruiterslist a[rel~="nofollow"] {
+  font-size: .8em;
+  color: #999999;
 }
 /* Ajax / tab-loaders */
 .loader {
@@ -224,7 +231,7 @@ blockquote {
   -moz-animation: spin 1s linear infinite;
   -o-animation: spin 1s linear infinite;
   animation: spin 1s linear infinite;
-  color: #999;
+  color: #999999;
 }
 .js {
   display: none;

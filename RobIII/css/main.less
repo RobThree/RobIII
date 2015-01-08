@@ -1,5 +1,6 @@
 @primarycolor: #ed053e;
 @subtleshadow: 0 1px 2px rgba(0,0,0,0.8);
+@shadowtextcolor: #999;
 
 @sans: 'Open Sans', sans-serif;
 @serif: 'Noto Serif', serif;
@@ -80,7 +81,7 @@ body {
 
 .time {
     margin-top: 20px;
-    color: #999;
+    color: @shadowtextcolor;
 }
 
 .time .badge {
@@ -146,7 +147,7 @@ a:focus {
 
 .language-selector a,
 .pocket-selector a {
-    color: #999;
+    color: @shadowtextcolor;
 }
 
 .language-selector a.active,
@@ -251,13 +252,22 @@ a:focus {
 }
 
 blockquote {
-    color: #999;
+    color: @shadowtextcolor;
     .smalltext;
 }
 
 .redacted {
     border-bottom: 1px dashed @primarycolor;
     cursor: help;
+}
+
+.recruitershame {
+    fill: @shadowtextcolor;
+}
+
+.recruiterslist a[rel~="nofollow"] {
+    font-size: .8em;
+    color: @shadowtextcolor;
 }
 
 /* Ajax / tab-loaders */
@@ -272,7 +282,7 @@ blockquote {
     -moz-animation: spin 1s linear infinite;
     -o-animation: spin 1s linear infinite;
     animation: spin 1s linear infinite;
-    color: #999;
+    color: @shadowtextcolor;
 }
 
 .js {
@@ -290,9 +300,8 @@ blockquote {
     }
 
     .pagination {
-    font-size: inherit;
-}
-
+        font-size: inherit;
+    }
 }
 
 @media (min-width:992px) {
