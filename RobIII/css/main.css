@@ -215,6 +215,7 @@ blockquote {
 }
 .recruitershame {
   fill: #999999;
+  height: 300px;
 }
 .recruiterslist a[rel~="nofollow"] {
   font-size: .8em;
