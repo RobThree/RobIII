@@ -139,6 +139,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404 .html" />
+    <Content Include="500.html" />
     <Content Include="500.aspx" />
     <Content Include="404.aspx" />
     <Content Include="css\bootstrap.min.css" />
