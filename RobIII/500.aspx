@@ -1,4 +1,4 @@
-<% Response.StatusCode = 500 %>
+<% Response.StatusCode = 500; %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
