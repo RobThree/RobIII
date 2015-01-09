@@ -140,7 +140,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="500.aspx" />
+    <Content Include="500.html" />
     <Content Include="404.aspx" />
+    <Content Include="404.html" />
     <Content Include="css\bootstrap.min.css" />
     <Content Include="css\ekko-lightbox.css" />
     <Content Include="css\ekko-lightbox.min.css">

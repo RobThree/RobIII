@@ -1,4 +1,4 @@
-<% Response.StatusCode = 404; %>
+<% Response.StatusCode = 404 %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
