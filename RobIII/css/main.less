@@ -118,6 +118,13 @@ footer {
     font-size: .6em;
 }
 
+.site-head,
+footer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
 a,
 a:active,
 a:visited,
@@ -318,6 +325,18 @@ blockquote {
     .site-title,
     .site-description {
         text-align: left;
+    }
+}
+
+@media print {
+    .site-head,
+    .nav,
+    .pagination {
+        display: none !important;
+    }
+
+    .svg-logos a {
+        display: block;
     }
 }
 
