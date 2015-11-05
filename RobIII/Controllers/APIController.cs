@@ -93,7 +93,8 @@ namespace RobIII.Controllers
                     smtpServer.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["smtpuser"], ConfigurationManager.AppSettings["smtppass"]);
                 }
 
-                mail.From = new MailAddress(model.Email, model.Name);
+                mail.ReplyToList.Add(new MailAddress(model.Email, model.Name));
+                mail.From = new MailAddress(ConfigurationManager.AppSettings["contactform-recipient"], ConfigurationManager.AppSettings["contactform-recipient-name"]);
                 mail.To.Add(ConfigurationManager.AppSettings["contactform-recipient"]);
                 mail.Subject = "Contact-form";
                 mail.Body = string.Format("{0}\n----\nIP: {1}\nUA: {2}", model.Message, HttpContext.Current.Request.UserHostAddress, HttpContext.Current.Request.UserAgent);
