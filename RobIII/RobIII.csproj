@@ -149,6 +149,7 @@
     <Content Include="css\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="bundleconfig.json" />
     <None Include="css\main.less" />
     <Content Include="css\main.css">
       <DependentUpon>main.less</DependentUpon>
@@ -182,9 +183,6 @@
     <Content Include="Views\Static\WallOfShame.cshtml" />
     <Content Include="Views\Pocket\Index.cshtml" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
-    <Content Include="js\vendor\ekko-lightbox.min.js.map">
-      <DependentUpon>ekko-lightbox.min.js</DependentUpon>
-    </Content>
     <Content Include="js\vendor\jquery-1.11.3.min.map" />
     <Content Include="js\vendor\jquery-2.1.4.min.map" />
     <None Include="Web.Debug.config">
