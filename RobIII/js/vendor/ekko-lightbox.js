@@ -268,7 +268,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
     showVideoIframe: function(url, width, height) {
       height = height || width;
       this.resize(width);
-      this.lightbox_body.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreenclass="embed-responsive-item"></iframe></div>');
+      this.lightbox_body.html('<div class="embed-responsive embed-responsive-16by9"><iframe width="' + width + '" height="' + height + '" src="' + url + '" frameborder="0" allowfullscreen class="embed-responsive-item"></iframe></div>');
       this.options.onContentLoaded.call(this);
       if (this.modal_arrows) {
         this.modal_arrows.css('display', 'none');
@@ -326,8 +326,10 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
           if (_this.modal_arrows) {
             _this.modal_arrows.css('display', 'block');
           }
-          _this.resize(img.width);
-          return _this.options.onContentLoaded.call(_this);
+          return image.load(function() {
+            _this.resize(img.width);
+            return _this.options.onContentLoaded.call(_this);
+          });
         };
         img.onerror = function() {
           return _this.error('Failed to load image: ' + src);
