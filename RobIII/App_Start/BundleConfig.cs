@@ -10,10 +10,8 @@ namespace MvcBootstrap
             //Modernizr/respond.js are loaded 
             //TODO: Take a look at http://www.asp.net/mvc/tutorials/mvc-4/bundling-and-minification; turns out CDN's can be used/specified here too! Coolio!
 
-            bundles.Add(new ScriptBundle("~/bundles/js-head").Include(
-                "~/js/vendor/modernizr-2.8.3.js",
-                "~/js/vendor/respond-1.4.2.js"
-            ));
+            //bundles.Add(new ScriptBundle("~/bundles/js-head").Include(
+            //));
 
             bundles.Add(new ScriptBundle("~/bundles/js-body").Include(
                 "~/js/vendor/bootstrap.js",

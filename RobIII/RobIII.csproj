@@ -166,8 +166,6 @@
     <Content Include="js\vendor\ekko-lightbox.js" />
     <Content Include="js\vendor\jquery-1.12.2.min.js" />
     <Content Include="js\vendor\jquery-2.2.2.min.js" />
-    <Content Include="js\vendor\modernizr-2.8.3.js" />
-    <Content Include="js\vendor\respond-1.4.2.js" />
     <Content Include="robots.txt" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
