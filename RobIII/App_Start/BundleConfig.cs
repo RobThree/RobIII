@@ -16,13 +16,14 @@ namespace MvcBootstrap
             ));
 
             bundles.Add(new ScriptBundle("~/bundles/js-body").Include(
+                "~/js/vendor/bootstrap.js",
                 "~/js/vendor/ekko-lightbox.js",
                 "~/js/main.js"
             ));
 
             bundles.Add(new StyleBundle("~/bundles/css").Include(
                 "~/css/bootstrap.min.css",
-                "~/css/ekko-lightbox.min.css",
+                "~/css/ekko-lightbox.css",
                 "~/css/main.css"
             ));
 
