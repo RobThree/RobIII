@@ -85,9 +85,11 @@ namespace RobIII.Controllers
             {
                 MailMessage mail = new MailMessage();
 
-                SmtpClient smtpServer = new SmtpClient(ConfigurationManager.AppSettings["smtphost"]);
-                smtpServer.Port = int.Parse(ConfigurationManager.AppSettings["smtpport"]);
-                smtpServer.EnableSsl = bool.Parse(ConfigurationManager.AppSettings["smtpusessl"]);
+                SmtpClient smtpServer = new SmtpClient(ConfigurationManager.AppSettings["smtphost"])
+                {
+                    Port = int.Parse(ConfigurationManager.AppSettings["smtpport"]),
+                    EnableSsl = bool.Parse(ConfigurationManager.AppSettings["smtpusessl"])
+                };
                 if (!string.IsNullOrEmpty(ConfigurationManager.AppSettings["smtpuser"]))
                 {
                     smtpServer.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["smtpuser"], ConfigurationManager.AppSettings["smtppass"]);
