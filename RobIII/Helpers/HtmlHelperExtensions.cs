@@ -20,8 +20,7 @@ namespace RobIII.Helpers
         {
             if (helper.ViewContext.Controller is T)
             {
-                object currentvalue = null;
-                if (helper.ViewContext.RouteData.Values.TryGetValue(key, out currentvalue))
+                if (helper.ViewContext.RouteData.Values.TryGetValue(key, out object currentvalue))
                 {
                     if (((string)currentvalue).Equals(value, StringComparison.OrdinalIgnoreCase))
                         return "active";

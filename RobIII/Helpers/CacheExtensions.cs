@@ -26,7 +26,7 @@ namespace RobIII.Helpers
         /// <remarks>Uses a default cache expiration period as defined in <see cref="CacheExtensions.DefaultCacheExpiration"/></remarks>
         public static T GetOrStore<T>(this Cache cache, string key, Func<T> generator)
         {
-            return cache.GetOrStore(key, (cache[key] == null && generator != null) ? generator() : default(T), DefaultCacheExpiration);
+            return cache.GetOrStore(key, (cache[key] == null && generator != null) ? generator() : default, DefaultCacheExpiration);
         }
 
 
@@ -49,7 +49,7 @@ namespace RobIII.Helpers
         /// <returns></returns>
         public static T GetOrStore<T>(this Cache cache, string key, Func<T> generator, TimeSpan ttl)
         {
-            return cache.GetOrStore(key, (cache[key] == null && generator != null) ? generator() : default(T), ttl);
+            return cache.GetOrStore(key, (cache[key] == null && generator != null) ? generator() : default, ttl);
         }
 
 
@@ -102,7 +102,7 @@ namespace RobIII.Helpers
                 {
                     if (result == null)
                     {
-                        result = obj != null ? obj : default(T);
+                        result = obj != null ? obj : default;
                         cache.Insert(key, result, null, DateTime.Now.Add(ttl), Cache.NoSlidingExpiration);
                     }
                 }
