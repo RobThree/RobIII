@@ -1,14 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.539
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobIII", "RobIII\RobIII.csproj", "{5A324816-D8D4-4E99-AAA3-EEF3FAB080BC}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{573F5446-C162-4521-B319-EDAD4D6160C2}"
-	ProjectSection(SolutionItems) = preProject
-		WebEssentials-Settings.json = WebEssentials-Settings.json
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobIII", "RobIII\RobIII.csproj", "{D4D6BD56-4E8A-4BD4-B912-A3E71BAD60CB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5A324816-D8D4-4E99-AAA3-EEF3FAB080BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5A324816-D8D4-4E99-AAA3-EEF3FAB080BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5A324816-D8D4-4E99-AAA3-EEF3FAB080BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5A324816-D8D4-4E99-AAA3-EEF3FAB080BC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4D6BD56-4E8A-4BD4-B912-A3E71BAD60CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4D6BD56-4E8A-4BD4-B912-A3E71BAD60CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4D6BD56-4E8A-4BD4-B912-A3E71BAD60CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4D6BD56-4E8A-4BD4-B912-A3E71BAD60CB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {FA00DDA4-ECF7-4878-8EBB-4C7C3721DBB9}
+		SolutionGuid = {044E69FD-89A6-4BD2-95DE-4CBC50965280}
 	EndGlobalSection
 EndGlobal

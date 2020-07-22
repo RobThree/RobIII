@@ -1,0 +1,3 @@
+#Keep minified files as-is
+**/css/*.min.* text eol=lf
+**/js/*.min.* text eol=lf
