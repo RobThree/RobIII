@@ -1,3 +1,4 @@
-#Keep minified files as-is
+# Keep minified files' line-endings as-is. If we don't the SRI integrity check will fail
+# https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity
 **/css/*.min.* text eol=lf
 **/js/*.min.* text eol=lf
