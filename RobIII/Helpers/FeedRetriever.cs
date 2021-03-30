@@ -27,8 +27,8 @@ namespace RobIII.Helpers
         //TODO: Move to config or something
         public static readonly List<Feed> Feeds = new List<Feed>(
             new[] {
-                new Feed { Language = FeedLanguage.NL, Uri = "http://robiii.tweakblogs.net/feed/" },
-                new Feed { Language = FeedLanguage.EN, Uri = "http://blog.robiii.nl/feeds/posts/default?alt=rss" },
+                new Feed { Language = FeedLanguage.NL, Uri = "https://robiii.tweakblogs.net/feed/" },
+                new Feed { Language = FeedLanguage.EN, Uri = "https://blog.robiii.nl/feeds/posts/default?alt=rss" },
             }
         );
 
