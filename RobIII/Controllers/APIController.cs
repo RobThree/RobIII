@@ -95,9 +95,8 @@ namespace RobIII.Controllers
                     smtpServer.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["smtpuser"], ConfigurationManager.AppSettings["smtppass"]);
                 }
 
-                var ip = string.IsNullOrEmpty(HttpContext.Current.Request.Headers["X_FORWARDED_FOR"])
-                    ? HttpContext.Current.Request.UserHostAddress
-                    : HttpContext.Current.Request.Headers["X_FORWARDED_FOR"];
+                return HttpContext.Current.Request.Headers.Select(h=> h.Key + ": " + h.Value).ToArray();
+                
                 mail.ReplyToList.Add(new MailAddress(model.Email, model.Name));
                 mail.From = new MailAddress(ConfigurationManager.AppSettings["contactform-recipient"], ConfigurationManager.AppSettings["contactform-recipient-name"]);
                 mail.To.Add(ConfigurationManager.AppSettings["contactform-recipient"]);
