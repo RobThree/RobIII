@@ -95,13 +95,13 @@ namespace RobIII.Controllers
                     smtpServer.Credentials = new System.Net.NetworkCredential(ConfigurationManager.AppSettings["smtpuser"], ConfigurationManager.AppSettings["smtppass"]);
                 }
 
-                return HttpContext.Current.Request.Headers.Select(h=> h.Key + ": " + h.Value).ToArray();
+                return HttpContext.Current.Request.Headers.AllKeys.Select(k=> k + ": " + HttpContext.Current.Request.Headers[k]).ToArray();
                 
                 mail.ReplyToList.Add(new MailAddress(model.Email, model.Name));
                 mail.From = new MailAddress(ConfigurationManager.AppSettings["contactform-recipient"], ConfigurationManager.AppSettings["contactform-recipient-name"]);
                 mail.To.Add(ConfigurationManager.AppSettings["contactform-recipient"]);
                 mail.Subject = "Contact-form";
-                mail.Body = string.Format("{0}\n----\nIP: {1}\nUA: {2}", model.Message, ip, HttpContext.Current.Request.UserAgent);
+                mail.Body = string.Format("{0}\n----\nIP: {1}\nUA: {2}", model.Message, "XXX", HttpContext.Current.Request.UserAgent);
                 mail.IsBodyHtml = false;
 
                 try
