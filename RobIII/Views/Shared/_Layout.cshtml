@@ -3,14 +3,14 @@
 <head prefix="og: //ogp.me/ns# fb: //ogp.me/ns/fb#">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>@(string.IsNullOrEmpty(Page.Title) ? string.Empty : Page.Title + " | ")RobIII</title>
+    <title>@(string.IsNullOrEmpty(Page.Title) ? string.Empty : Page.Title + " | ") RobIII</title>
     <meta name="description" content="@Page.Description">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400">
     @Styles.Render("~/bundles/css")
     @*@Scripts.Render("~/bundles/js-head")*@
-
-    <meta property="og:title" content="@(string.IsNullOrEmpty(Page.Title) ? string.Empty : Page.Title + " | ")RobIII">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <meta property="og:title" content="@(string.IsNullOrEmpty(Page.Title) ? string.Empty : Page.Title + " | ") RobIII">
     <meta property="og:url" content="https://robiii.me/">
     <meta property="og:image" content="https://robiii.me/img/back.jpg">
     <meta property="og:description" content="@Page.Description" />
@@ -20,14 +20,6 @@
 </head>
 
 <body>
-    <div class="container">
-        <!--[if lt IE 9]>
-            <p class="alert alert-danger text-center">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-            You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.
-            </p>
-        <![endif]-->
-    </div>
     <div class="site-head">
         <div class="container container-fluid">
             <div class="row">
@@ -62,14 +54,9 @@
     </footer>
 
 
-    <!--[if lt IE 9]>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.12.2.min.js"><\/script>')</script>
-    <![endif]-->
-    <!--[if gte IE 9]><!-->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-2.2.2.min.js"><\/script>')</script>
-    <!--<![endif]-->
+
     @Scripts.Render("~/bundles/js-body")
     <script>
         (function (i, s, o, g, r, a, m) {
