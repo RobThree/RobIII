@@ -21,7 +21,9 @@ namespace RobIII.Controllers
             };
 
             if (model.PagedList.Count == 0)
+            {
                 throw new HttpException(404, "No items for this page");
+            }
 
             return View(model);
         }

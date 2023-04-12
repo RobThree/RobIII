@@ -1,5 +1,4 @@
 ﻿using PagedList;
-using SimpleFeedReader;
 
 namespace RobIII.Models
 {

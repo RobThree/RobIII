@@ -1,22 +1,15 @@
 ﻿using RobIII.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace RobIII.Helpers
 {
     public static class ModelExtensions
     {
         public static string IsCurrentLanguage(this BlogrollViewmodel model, FeedLanguage language)
-        {
-            return IsCurrentLanguage(model, language.ToString());
-        }
+            => IsCurrentLanguage(model, language.ToString());
 
         public static string IsCurrentLanguage(this BlogrollViewmodel model, string language)
-        {
-            return model.Language.Equals(language, StringComparison.OrdinalIgnoreCase) ? "active" : null;
-        }
+            => model.Language.Equals(language, StringComparison.OrdinalIgnoreCase) ? "active" : null;
 
         public static string GetLanguageString(this BlogrollViewmodel model, string defaultString = null)
         {
@@ -32,14 +25,10 @@ namespace RobIII.Helpers
         }
 
         public static string IsCurrentStatus(this PocketViewmodel model, PocketStatus status)
-        {
-            return IsCurrentStatus(model, status.ToString());
-        }
+            => IsCurrentStatus(model, status.ToString());
 
         public static string IsCurrentStatus(this PocketViewmodel model, string status)
-        {
-            return model.Status.Equals(status, StringComparison.OrdinalIgnoreCase) ? "active" : null;
-        }
+            => model.Status.Equals(status, StringComparison.OrdinalIgnoreCase) ? "active" : null;
 
         public static string GetStatusString(this PocketViewmodel model, string defaultString = null)
         {

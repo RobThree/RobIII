@@ -13,18 +13,18 @@ namespace RobIII.Helpers
                 if (_renderoptions == null)
                 {
                     _renderoptions = new PagedListRenderOptions
-				       	{
-				       		DisplayLinkToFirstPage = PagedListDisplayMode.Never,
-				       		DisplayLinkToLastPage = PagedListDisplayMode.Never,
-							DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
-							DisplayLinkToNextPage = PagedListDisplayMode.Always,
-				       		DisplayLinkToIndividualPages = false,
-				       		DisplayPageCountAndCurrentLocation = true,
-                            LinkToPreviousPageFormat = "&larr; Newer",
-			                LinkToNextPageFormat = "Older &rarr;",
-			                PageCountAndCurrentLocationFormat = "Page {0} of {1}",
-			                FunctionToDisplayEachPageNumber = null
-				       	};
+                    {
+                        DisplayLinkToFirstPage = PagedListDisplayMode.Never,
+                        DisplayLinkToLastPage = PagedListDisplayMode.Never,
+                        DisplayLinkToPreviousPage = PagedListDisplayMode.Always,
+                        DisplayLinkToNextPage = PagedListDisplayMode.Always,
+                        DisplayLinkToIndividualPages = false,
+                        DisplayPageCountAndCurrentLocation = true,
+                        LinkToPreviousPageFormat = "&larr; Newer",
+                        LinkToNextPageFormat = "Older &rarr;",
+                        PageCountAndCurrentLocationFormat = "Page {0} of {1}",
+                        FunctionToDisplayEachPageNumber = null
+                    };
                 }
                 return _renderoptions;
             }

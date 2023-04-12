@@ -8,7 +8,7 @@ namespace RobIII.Helpers
     {
         public bool Match(HttpContextBase httpContext, Route route, string parameterName, RouteValueDictionary values, RouteDirection routeDirection)
         {
-            string viewPath = httpContext.Server.MapPath(string.Format("~/Views/Static/{0}.cshtml", values[parameterName]));
+            var viewPath = httpContext.Server.MapPath(string.Format("~/Views/Static/{0}.cshtml", values[parameterName]));
 
             return File.Exists(viewPath);
         }

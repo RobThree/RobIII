@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace RobIII.Models
 {
@@ -32,11 +29,17 @@ namespace RobIII.Models
 
         public string GetTitle()
         {
-            if (!string.IsNullOrEmpty(this.Title))
-                return this.Title;
-            if (!string.IsNullOrEmpty(this.FullTitle))
-                return this.FullTitle;
-            return this.Uri;
-       }
+            if (!string.IsNullOrEmpty(Title))
+            {
+                return Title;
+            }
+
+            if (!string.IsNullOrEmpty(FullTitle))
+            {
+                return FullTitle;
+            }
+
+            return Uri;
+        }
     }
 }

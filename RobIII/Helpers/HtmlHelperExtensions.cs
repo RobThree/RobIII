@@ -9,7 +9,9 @@ namespace RobIII.Helpers
             where T : Controller
         {
             if (helper.ViewContext.Controller is T)
+            {
                 return "active";
+            }
 
             return string.Empty;
         }
@@ -24,7 +26,9 @@ namespace RobIII.Helpers
                 if (helper.ViewContext.RouteData.Values.TryGetValue(key, out currentvalue))
                 {
                     if (((string)currentvalue).Equals(value, StringComparison.OrdinalIgnoreCase))
+                    {
                         return "active";
+                    }
                 }
             }
 

@@ -1,6 +1,4 @@
 ﻿using MvcBootstrap;
-using System;
-using System.Globalization;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;

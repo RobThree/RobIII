@@ -27,7 +27,7 @@ namespace RobIII.Helpers
         //TODO: Move to config or something
         public static readonly List<Feed> Feeds = new List<Feed>(
             new[] {
-                new Feed { Language = FeedLanguage.NL, Uri = "https://robiii.tweakblogs.net/feed/" },
+                //new Feed { Language = FeedLanguage.NL, Uri = "https://robiii.tweakblogs.net/feed/" },
                 new Feed { Language = FeedLanguage.EN, Uri = "https://blog.robiii.nl/feeds/posts/default?alt=rss" },
             }
         );
@@ -37,22 +37,18 @@ namespace RobIII.Helpers
 
         public FeedRetriever(TimeSpan defaultTTL)
         {
-            this.DefaultTTL = defaultTTL;
+            DefaultTTL = defaultTTL;
         }
 
         public IQueryable<FeedItem> GetByLanguage(string language)
-        {
-            return this.GetByLanguage(language, this.DefaultTTL);
-        }
+            => GetByLanguage(language, DefaultTTL);
 
         public IQueryable<FeedItem> GetByLanguage(string language, TimeSpan ttl)
-        {
-            return this.RetrieveFeeds(
+            => RetrieveFeeds(
                 FeedRetriever.Feeds.Where(f => "all".Equals(language, StringComparison.OrdinalIgnoreCase) || f.Language.ToString().Equals(language, StringComparison.OrdinalIgnoreCase)),
                 ttl
             )
             .AsQueryable();
-        }
 
         private IEnumerable<FeedItem> RetrieveFeeds(IEnumerable<Feed> feeds, TimeSpan ttl)
         {
