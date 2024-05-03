@@ -1,0 +1,13 @@
+Contact: https://robiii.me/static/contact
+Expires: 2024-12-31T23:59:59.999Z
+
+Encryption: https://keybase.io/robiii
+Encryption: https://robiii.me/.well-known/gpg-key.txt
+Encryption: https://robiii.me/.well-known/ssh-key.txt
+
+Preferred-Languages: en, nl
+
+Canonical: https://robiii.me/.well-known/security.txt
+
+# Signed Copy: https://robiii.me/.well-known/security.txt.asc
+# gpg --clearsign -u keybase.io/robiii .well-known/security.txt
